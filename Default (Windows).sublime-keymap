@@ -1,0 +1,87 @@
+[
+	// Layout
+	//   [shift]
+	//   [ctrl] [super] [alt]
+
+	// F1:
+	// F2: next_bookmark
+	// F3: find_next
+	// F4: next_result
+	// F5:
+	// F6: spell_check
+	// F7: build
+	// F8:
+	// F9: sort_lines
+	// F10:
+	// F11: toggle_full_screen
+	// F12: available (goto_definition: use Ctrl + Left Click)
+
+	// Sublime Text
+	{ "keys": ["ctrl+shift+t"], "command": "reopen_last_file" }, // restore default behaviour
+	{ "keys": ["ctrl+alt+p"], "command": "prompt_select_workspace" },
+	{ "keys": ["alt+r"], "command": "goto_symbol_in_project" },
+	// { "keys": ["ctrl+."], "command": "show_overlay", "args": {"overlay": "goto", "text": "#"} }, // Use go_to_data
+	{ "keys": ["super+alt+left"], "command": "prev_view" }, // Tab  Prev
+	{ "keys": ["super+alt+right"], "command": "next_view" }, // Tab Next
+	{ "keys": ["ctrl+super+left"], "command": "jump_back" }, // History Back
+	{ "keys": ["ctrl+super+right"], "command": "jump_forward" }, // History Forward
+	{ "keys": ["ctrl+alt+v"], "command": "camel_snake" }, // Camel_Snake
+
+	// Sublime Text (Windows)
+	{
+		"keys": ["ctrl+,"], "command": "edit_settings", "args":
+		{
+			"base_file": "${packages}/Default/Preferences.sublime-settings",
+			"default": "{\n\t$0\n}\n"
+		}
+	},
+
+	// AgentRansack
+	{ "keys": ["ctrl+alt+f3"],  "command": "agent_ransack" },
+
+	// ColorHighlighter
+	{ "keys": ["ctrl+alt+c"], "command": "color_picker", "context": [{ "key": "color_highlighter.color_picker" }] },
+
+	// FileDiffs
+	{ "keys": ["ctrl+alt+d"],  "command": "file_diff_previous" },
+
+	// Git
+	{ "keys": ["ctrl+shift+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "} },
+
+	// GitGutter
+	{ "keys": ["alt+down"], "command": "git_gutter_next_change" },
+	{ "keys": ["alt+up"], "command": "git_gutter_prev_change" },
+
+	// GoToClass
+	// { "keys": [""], "command": "go_to_class"}, // Use Ctrl + Right Click
+	{ "keys": ["alt+m"], "command": "go_to_function"}, // Select Methods
+	{ "keys": ["ctrl+."], "command": "go_to_data"}, // "#" under cursor
+
+	// Package Control
+	{ "keys": ["ctrl+shift+c", "ctrl+shift+c"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Package Control: "} },
+	{ "keys": ["ctrl+shift+c", "ctrl+shift+t"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "ChannelRepositoryTools: "} },
+
+	// PHPUnit
+	// {"keys": ["f6"], "command": "phpunit_run_tests"},
+	// {"keys": ["shift+f6"], "command": "phpunit_run_all_tests"},
+	// {"keys": ["ctrl+f6"], "command": "phpunit_test_this_class"},
+	// {"keys": ["alt+f6"], "command": "phpunit_open_test_class"},
+	// {"keys": ["shift+alt+f6"], "command": "phpunit_open_class_being_tested"},
+
+	// Plugin Debugger
+	//{"keys": ["ctrl+f5"], "command": "debug", "args": {"cmd": "echo", "message": "Hello World"} },
+
+	// Terminal
+	{ "keys": ["ctrl+alt+t"], "command": "open_terminal" },
+
+	// Xdebug
+	// {"keys": ["shift+f5"], "command": "xdebug" },
+	// // {"keys": ["f8"], "command": "xdebug_continue" },
+	// {"keys": ["f9"], "command": "xdebug_breakpoint"},
+	// {"keys": ["f5"], "command": "xdebug_continue", "args": {"state": "run"}},
+	// {"keys": ["f10"], "command": "xdebug_continue", "args": {"state": "step_over"}},
+	// {"keys": ["f11"], "command": "xdebug_continue", "args": {"state": "step_into"}},
+	// {"keys": ["shift+f11"], "command": "xdebug_continue", "args": {"state": "step_out"}},
+
+	{}
+]

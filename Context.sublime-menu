@@ -1,0 +1,8 @@
+[
+	{ "caption": "-"},
+	{ "caption": "Git Status...", "command": "git_status" },
+	{ "caption": "Git Check this", "command": "git_diff_tool" },
+	{ "caption": "-", "id": "tools" },
+	{ "caption": "λ Cmder", "command": "open_terminal", "platform": "Windows" },
+	{ "caption": "iTerm²", "command": "open_terminal", "platform": "OSX" }
+]

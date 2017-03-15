@@ -1,0 +1,13 @@
+[
+	{ "caption": "-", "id": "tools" },
+	{ "command": "open_terminal", "caption": "λ Cmder", "platform": "Windows" },
+	{ "command": "open_terminal", "caption": "iTerm²", "platform": "OSX" },
+	{ "caption": "-", "id": "file" },
+	{ "command": "open_in_browser", "caption": "Open in Browser" },
+	{ "command": "open_dir", "args": {"dir": "$file_path", "file": "$file_name"}, "caption": "Open Containing Folder…" },
+	{ "command": "copy_path", "caption": "Copy Path to Clipboard" },
+	{ "command": "side_bar_copy_name", "caption": "Copy Name", "id": "side-bar-clip-copy-name", "args": {"paths": []} },
+	{ "command": "reveal_in_side_bar", "caption": "Reveal in Side Bar" },
+	{ "command": "reopen_last_file", "caption": "Reopen Closed File" },
+	{ "caption": "-" }
+]

@@ -1,0 +1,9 @@
+{
+    "cmd": ["SublimeBuild.bat", "$file"],
+    "selector": "source.dosbatch",
+    "variants": [
+	    { "cmd": ["$file"],
+	      "name": "Run"
+	    }
+    ]
+}

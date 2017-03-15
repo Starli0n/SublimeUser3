@@ -1,0 +1,12 @@
+{
+    "environment":
+    [
+        { "Packages": [ "/Users/Starli0n/Library/Application Support/Sublime Text 3/Packages/" ]},
+        { "Packages.ctrl": [ "/Users/Starli0n/Library/Application Support/Sublime Text 3/Packages.ctrl/" ]},
+        { "Packages.git": [ "/Users/Starli0n/Library/Application Support/Sublime Text 3/Packages.git/" ]},
+        { "Packages": [ "C:\\Tools\\SublimeText3\\Data\\Packages\\" ] },
+        { "Packages.ctrl": [ "C:\\Tools\\SublimeText3\\Data\\Packages.ctrl\\" ]},
+        { "Packages.git": [ "C:\\Tools\\SublimeText3\\Data\\Packages.git\\" ]}
+    ],
+    "expand_alias": false
+}

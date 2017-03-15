@@ -1,0 +1,10 @@
+[
+	{
+		"caption": "File: Save EOL…",
+		"command": "save_eol"
+	},
+	{
+		"caption": "Plugin Debugger: Run",
+		"command": "debug", "args": {"cmd": "echo", "message": "Hello World"}
+	}
+]

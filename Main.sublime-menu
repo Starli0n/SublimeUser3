@@ -1,0 +1,177 @@
+[
+	{
+		"caption": "File",
+		"mnemonic": "F",
+		"id": "file",
+		"children":
+		[
+			{ "command": "save_eol", "caption": "Save EOL…" }
+		]
+	},
+	{
+		"caption": "Goto",
+		"mnemonic": "G",
+		"id": "goto",
+		"children":
+		[
+			{ "command": "go_to_function", "caption": "Goto Method…" },
+			{ "command": "go_to_data", "caption": "Goto Data" },
+			{ "caption": "-" }
+		]
+	},
+	{
+		"caption": "Tools",
+		"mnemonic": "T",
+		"id": "tools",
+		"children":
+		[
+			{ "caption": "-" },
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "C:\\Users\\Starli0n\\.gitconfig",
+					"user_file": "${packages}/User/Resources/Windows/HOME/.gitconfig"
+				},
+				"caption": "Git Global Config", "platform": "Windows"
+			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "~/.gitconfig",
+					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
+				},
+				"caption": "Git Global Config", "platform": "OSX"
+			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/User/Resources/Windows/HOME/.gitconfig",
+					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
+				},
+				"caption": "Git Global Config - Platform"
+			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/User/Resources/Windows/bin/gitools.sh",
+					"user_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh"
+				},
+				"caption": "gitools", "platform": "Windows"
+			},
+			{
+				"command": "edit_settings", "args":
+				{
+					"base_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh",
+					"user_file": "${packages}/User/Resources/Windows/bin/gitools.sh"
+				},
+				"caption": "gitools", "platform": "OSX"
+			},
+			{ "command": "open_file", "args": {"file": "../../../../System/w.cmd"}, "caption": "Menu - Work", "platform": "OSX" },
+			{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/AppData/Roaming/NuGet/NuGet.Config"}, "caption": "NuGet Config", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "../../../../cmder_mini/config/user-aliases.cmd"}, "caption": "Aliases", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" },
+			{ "caption": "-" },
+			{ "command": "git_custom", "args": {"command": "config user.name Starli0n;config user.email Starli0n@users.noreply.github.com"}, "caption": "Git Set User"},
+			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "GitHub" },
+			{ "command": "open_url", "args": {"url": "https://bitbucket.org/dashboard/overview"}, "caption": "BitBucket" },
+			{ "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/227600674"}, "caption": "Wunderlist" },
+			//{ "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "Cloud 9 IDE" }
+		]
+	},
+	{
+		"caption": "Project",
+		"mnemonic": "P",
+		"id": "project",
+		"children":
+		[
+			{ "caption": "-" },
+			{ "command": "open_file", "args": {"file": "${packages}/../Local/Session.sublime_session"}, "caption": "Sublime Session" }
+		]
+	},
+	{
+		"caption": "Preferences",
+		"mnemonic": "n",
+		"id": "preferences",
+		"children":
+		[
+			{ "caption": "-", "id": "settings_more" },
+			{
+				"caption": "Settings – More",
+				"children":
+				[
+					{ "caption": "-" },
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/Default/Context.sublime-menu",
+							"default": "{\n\t$0\n}\n"
+						},
+						"caption": "Context"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/Default/Main.sublime-menu",
+							"default": "{\n\t$0\n}\n"
+						},
+						"caption": "Main"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/Default/Default ($platform).sublime-mousemap",
+							"default": "{\n\t$0\n}\n"
+						},
+						"caption": "Mouse Bindings"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/Default/Side Bar.sublime-menu",
+							"default": "{\n\t$0\n}\n"
+						},
+						"caption": "Side Bar"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/Default/Tab Context.sublime-menu",
+							"default": "{\n\t$0\n}\n"
+						},
+						"caption": "Tab Context"
+					}
+				]
+			}
+		]
+	},
+	{
+		"caption": "Help",
+		"mnemonic": "H",
+		"id": "help",
+		"children":
+		[
+			{ "caption": "-" },
+			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3"}, "caption": "Sublime Text 3 Documentation" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info"}, "caption": "Unofficial  Documentation" },
+			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3/api_reference.html"}, "caption": "API Reference" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html"}, "caption": "Keyboard Shortcuts", "platform": "!OSX" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_osx.html"}, "caption": "Keyboard Shortcuts", "platform": "OSX" },
+			{ "caption": "-" },
+			{ "command": "open_url", "args": {"url": "https://github.com/SublimeTextIssues/Core"}, "caption": "Bug Tracking" },
+			{ "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "Forum" },
+			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n/SublimeUser3/blob/master/README.md"}, "caption": "SublimeUser3" },
+			{ "caption": "-" },
+			{
+				"caption": "Git",
+				"children":
+				[
+					{ "command": "open_url", "args": {"url": "http://git-scm.com/docs"}, "caption": "Reference" },
+					{ "command": "open_url", "args": {"url": "http://git-scm.com/book"}, "caption": "Book" },
+					{ "command": "open_url", "args": {"url": "https://github.com/anubhavchaturvedi/bitsaa/blob/master/resources/salesforce_git_developer_cheatsheet.pdf"}, "caption": "Quick reference" },
+					{ "command": "open_url", "args": {"url": "http://ndpsoftware.com/git-cheatsheet.html"}, "caption": "Workflow" }
+				]
+			},
+			{ "command": "open_url", "args": {"url": "https://packagecontrol.io/"}, "caption": "Packages Control" }
+		]
+	}
+]

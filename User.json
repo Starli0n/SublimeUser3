@@ -1,0 +1,9 @@
+{
+	"schema_version": "3.0.0",
+	"packages": [
+		{
+			"name": "User",
+			"details": "https://github.com/Starli0n/SublimeUser3"
+		}
+	]
+}
