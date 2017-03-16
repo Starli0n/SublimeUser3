@@ -37,7 +37,7 @@
 			{
 				"command": "edit_settings", "args":
 				{
-					"base_file": "~/.gitconfig",
+					"base_file": "/Users/Starli0n/.gitconfig",
 					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
 				},
 				"caption": "Git Global Config", "platform": "OSX"
@@ -66,7 +66,7 @@
 				},
 				"caption": "gitools", "platform": "OSX"
 			},
-			{ "command": "open_file", "args": {"file": "../../../../System/w.cmd"}, "caption": "Menu - Work", "platform": "OSX" },
+			{ "command": "open_file", "args": {"file": "../../../../System/w.cmd"}, "caption": "Menu - Work", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/AppData/Roaming/NuGet/NuGet.Config"}, "caption": "NuGet Config", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "../../../../cmder_mini/config/user-aliases.cmd"}, "caption": "Aliases", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" },

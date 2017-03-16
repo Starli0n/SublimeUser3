@@ -108,8 +108,8 @@
 	po = push origin master # Push local commits to remote repository branch @BRANCH_NAME
 	pom = push origin master # Push local commits to remote repository
 	pomf = push origin master --force # Force push
-	pum = push upstream master # Push local commits to remote repository
-	pumf = push upstream master --force # Force push
+	pum = push upstream master # Push local commits to upstream repository
+	pumf = push upstream master --force # Force push local commits to upstream repository
 	pogp = push origin gh-pages # Push to GitHub pages
 	pogpf = push origin gh-pages --force # Force push to GitHub pages
 	pom1 = push origin HEAD~1:master # Push commit except the last one

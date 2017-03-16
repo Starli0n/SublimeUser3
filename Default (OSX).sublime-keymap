@@ -7,13 +7,13 @@
 	// F2: next_bookmark
 	// F3: find_next
 	// F4: next_result
-	// F5:
+	// F5: sort_lines
 	// F6: spell_check
 	// F7: build
 	// F8:
-	// F9: sort_lines
+	// F9:
 	// F10:
-	// F11: toggle_full_screen
+	// F11:
 	// F12: available (goto_definition: use Cmd + Left Click)
 
 	// Sublime Text
@@ -34,12 +34,14 @@
 	{ "keys": ["super+shift+f3"], "command": "find_under_prev" },
 	{ "keys": ["alt+f3"], "command": "find_all_under" },
 	{ "keys": ["super+ù"], "command": "show_panel", "args": {"panel": "console", "toggle": true} },
+	{ "keys": ["super+:"], "command": "toggle_comment", "args": {"block": false} },
+	{ "keys": ["super+shift+:"], "command": "toggle_comment", "args": {"block": true} },
 
 	// ColorHighlighter
 	{ "keys": ["ctrl+super+c"], "command": "color_picker", "context": [{ "key": "color_highlighter.color_picker" }] },
 
 	// FileDiffs
-	{ "keys": ["ctrl+super+d"],  "command": "file_diff_previous" },
+	{ "keys": ["ctrl+alt+super+d"],  "command": "file_diff_previous" },
 
 	// Git
 	{ "keys": ["super+shift+g"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Git: "} },
@@ -52,6 +54,10 @@
 	// { "keys": [""], "command": "go_to_class"}, // Use Super + Right Click
 	{ "keys": ["alt+m"], "command": "go_to_function"}, // Select Methods
 	{ "keys": ["super+;"], "command": "go_to_data"}, // "#" under cursor
+
+	// Insert Nums
+	{ "keys": ["ctrl+super+n"], "command": "prompt_insert_nums" },
+	{ "keys": ["ctrl+shift+super+n"], "command": "prompt_insert_nums", "args": { "preview": false } },
 
 	// Package Control
 	{ "keys": ["super+shift+c", "super+shift+c"], "command": "show_overlay", "args": {"overlay": "command_palette", "text": "Package Control: "} },

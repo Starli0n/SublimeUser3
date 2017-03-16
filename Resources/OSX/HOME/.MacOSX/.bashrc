@@ -11,6 +11,9 @@ export CURL_CA_BUNDLE=/usr/local/share/ca-bundle.crt
 export DOCKER_MACHINE_NAME=default
 export XDEBUG_SESSION=sublime.xdebug
 export WORK=$HOME/Sites
+export GOPATH=$HOME/Projects/Go
+export GOBIN=$GOPATH/bin
+export GOSRC=$GOPATH/src
 
 
 ##############
@@ -117,6 +120,9 @@ alias subld='$EDITOR -n "$(pwd)"'
 alias pkg="cd $PACKAGE"
 alias pkgu="cd $PACKAGE/User"
 alias work="cd $WORK"
+
+### Go
+alias gogo='cd $GOSRC'
 
 ### Tools
 alias rapache='sudo /usr/sbin/apachectl restart' # Restart apache with XDEBUG_SESSION

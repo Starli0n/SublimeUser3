@@ -46,6 +46,7 @@ In `Package Control.sublime-settings`
 ```
 
 ### Change the configuration depending of the platform
+- In `Packages/User/Main.sublime-menu` change `base_file` path of `Git Global Config`
 - Configure `FileDiff` command by editing `Packages/User/FileDiffs.sublime-settings`
 	- [OSX] Replace by `/usr/local/bin/bcomp` for Beyond Compare
 	- [WIN] Update `WinMerge` path
@@ -55,23 +56,36 @@ In `Package Control.sublime-settings`
 ### Package Control: Install Packages
 [Package Control: Home Page](https://packagecontrol.io)
 - [AgentRansack](https://github.com/Starli0n/SublimeAgentRansack) *
+- [Alignment](https://packagecontrol.io/packages/Alignment)
 - [AutoHotkey](https://packagecontrol.io/packages/AutoHotkey)
+- [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
 - [ChannelRepositoryTools](https://packagecontrol.io/packages/ChannelRepositoryTools)
 - [Color Highlighter](https://packagecontrol.io/packages/Color%20Highlighter)
 - [DocBlockr](https://packagecontrol.io/packages/DocBlockr)
+- [Emmet Css Snippets](https://packagecontrol.io/packages/Emmet%20Css%20Snippets)
+- [Emmet](https://packagecontrol.io/packages/Emmet)
 - [FileDiffs](https://packagecontrol.io/packages/FileDiffs)
 - [Git](https://packagecontrol.io/packages/Git)
 - [GitGutter](https://packagecontrol.io/packages/GitGutter)
 - [GoToClass](https://packagecontrol.io/packages/GoToClass)
+- [HTML5](https://packagecontrol.io/packages/HTML5)
+- [HTMLAttributes](https://packagecontrol.io/packages/HTMLAttributes)
 - [Language - French - Français](https://packagecontrol.io/packages/Language%20-%20French%20-%20Fran%C3%A7ais)
+- [LiveReload](https://packagecontrol.io/packages/LiveReload)
 - [Open-Include](https://github.com/titoBouzout/Open-Include)
 - [Package Control](https://packagecontrol.io/installation#st3)
+- [PackageResourceViewer](https://packagecontrol.io/packages/PackageResourceViewer)
 - [PHPUnit](https://packagecontrol.io/packages/PHPUnit)
+- [Plugin Debugger](https://packagecontrol.io/packages/Plugin%20Debugger)
+- [Pretty JSON](https://packagecontrol.io/packages/Pretty%20JSON)
+- [rsub](https://packagecontrol.io/packages/rsub)
 - [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
+- [SublimeLinter](https://packagecontrol.io/packages/SublimeLinter)
 - [Terminal](https://packagecontrol.io/packages/Terminal)
 - [Theme - Cobalt2](https://packagecontrol.io/packages/Theme%20-%20Cobalt2)
 - [TrailingSpaces](https://packagecontrol.io/packages/TrailingSpaces)
 - [Verbose](https://packagecontrol.io/packages/Verbose) *
+- [Xdebug](https://packagecontrol.io/packages/Xdebug)
 
 (*own plugins)
 
@@ -81,7 +95,8 @@ In `Package Control.sublime-settings`
 
 ### Create some alias
 ```sh
-> sudo ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+> chflags nohidden ~/Library
+> sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
 > ln -s "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Resources/OSX/HOME/.gitconfig" "$HOME/.gitconfig"
 > ln -s "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Resources/OSX/HOME/.bash_profile" "$HOME/.bash_profile"
 > ln -s "$HOME/Library/Application Support/Sublime Text 3/Packages/User/Resources/OSX/HOME/.MacOSX" "$HOME/.MacOSX"
@@ -94,11 +109,18 @@ In `Package Control.sublime-settings`
 
 ### Change font size
 - Edit `Packages/User/Preferences.sublime-settings`
-- Replace by `"font_size": 15.0`
+- Replace by `"font_size": 12.0`
+
+### Open with Sublime Text
+- Copy `Packages/User/Resources/OSX/HOME/Library/Services/Open with Sublime Text.workflow` to `~/Library/Services/Open with Sublime Text.workflow`
 
 ### Copy Path to Clipboard
 - Copy `Packages/User/Resources/OSX/HOME/Library/Services/Copy Path to Clipboard.workflow` to `~/Library/Services/Copy Path to Clipboard.workflow`
-- Add a shorcut `Super+Shift+C` (System Preferences > Keyboard > Application Shortcuts)
+- Add a shorcut `Ctrl+Super+C` (System Preferences > Keyboard > Shortcuts > Services > Files and Folders)
+
+### iTerm² Here…
+- Copy `Packages/User/Resources/OSX/HOME/Library/Services/iTerm² Here….workflow` to `~/Library/Services/iTerm² Here….workflow`
+- The script is based on iTerm` of [Terminal](https://github.com/wbond/sublime_terminal/blob/master/iTerm2-v3.sh) package
 
 ### Show hidden files with a widget
 - Copy `Packages/User/Resources/OSX/HOME/Library/Widgets/HiddenFiles.wdgt` to `~/Library/Widgets/HiddenFiles.wdgt`
@@ -122,9 +144,8 @@ In `Package Control.sublime-settings`
 ### Create an alias `.gitconfig`
 `> mklink  %HOME%\.gitconfig C:\Tools\SublimeText3\Data\Packages\User\Resources\Windows\HOME\.gitconfig`
 
-### Change the path of `.gitconfig`
-In `Packages/User/Main.sublime-menu` change `base_file` of `Git Global Config` <br/>
-At the same time, change `NuGet Config` path.
+### Change the path of `Nuget Config`
+In `Packages/User/Main.sublime-menu` change `NuGet Config` path
 
 ### Create aliases to use bash
 ```bat
