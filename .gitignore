@@ -1,5 +1,6 @@
 *.cache
 *.pyc
+*.sublime-workspace
 Color Highlighter
 ColorHighlighter.sublime-settings
 oscrypto-ca-bundle.crt

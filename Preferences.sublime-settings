@@ -49,6 +49,7 @@
 	],
 	"line_padding_bottom": 1,
 	"line_padding_top": 1,
+	"show_full_path": true,
 	"theme": "Cobalt2.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true

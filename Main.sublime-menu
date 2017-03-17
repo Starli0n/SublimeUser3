@@ -32,7 +32,7 @@
 					"base_file": "C:\\Users\\Starli0n\\.gitconfig",
 					"user_file": "${packages}/User/Resources/Windows/HOME/.gitconfig"
 				},
-				"caption": "Git Global Config", "platform": "Windows"
+				"caption": "Open Git Global Config", "platform": "Windows"
 			},
 			{
 				"command": "edit_settings", "args":
@@ -40,7 +40,7 @@
 					"base_file": "/Users/Starli0n/.gitconfig",
 					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
 				},
-				"caption": "Git Global Config", "platform": "OSX"
+				"caption": "Open Git Global Config", "platform": "OSX"
 			},
 			{
 				"command": "edit_settings", "args":
@@ -48,8 +48,10 @@
 					"base_file": "${packages}/User/Resources/Windows/HOME/.gitconfig",
 					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
 				},
-				"caption": "Git Global Config - Platform"
+				"caption": "Open Git Global Config - Platforms"
 			},
+			{ "command": "git_open_config_file", "caption": "Open Git Local Config"},
+			{ "command": "user_config_set", "caption": "Set Git Local Config User"},
 			{
 				"command": "edit_settings", "args":
 				{
@@ -66,16 +68,10 @@
 				},
 				"caption": "gitools", "platform": "OSX"
 			},
-			{ "command": "open_file", "args": {"file": "../../../../System/w.cmd"}, "caption": "Menu - Work", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "/D/Tools/System/w.cmd"}, "caption": "Menu - Work", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/AppData/Roaming/NuGet/NuGet.Config"}, "caption": "NuGet Config", "platform": "Windows" },
-			{ "command": "open_file", "args": {"file": "../../../../cmder_mini/config/user-aliases.cmd"}, "caption": "Aliases", "platform": "Windows" },
-			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" },
-			{ "caption": "-" },
-			{ "command": "git_custom", "args": {"command": "config user.name Starli0n;config user.email Starli0n@users.noreply.github.com"}, "caption": "Git Set User"},
-			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "GitHub" },
-			{ "command": "open_url", "args": {"url": "https://bitbucket.org/dashboard/overview"}, "caption": "BitBucket" },
-			{ "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/227600674"}, "caption": "Wunderlist" },
-			//{ "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "Cloud 9 IDE" }
+			{ "command": "open_file", "args": {"file": "/D/Tools/cmder_mini/config/user-aliases.cmd"}, "caption": "Aliases", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" }
 		]
 	},
 	{
@@ -145,33 +141,32 @@
 		]
 	},
 	{
-		"caption": "Help",
-		"mnemonic": "H",
-		"id": "help",
+		"caption": "Bookmarks",
+		"mnemonic": "B",
+		"id": "",
 		"children":
 		[
 			{ "caption": "-" },
-			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3"}, "caption": "Sublime Text 3 Documentation" },
-			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info"}, "caption": "Unofficial  Documentation" },
-			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3/api_reference.html"}, "caption": "API Reference" },
-			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html"}, "caption": "Keyboard Shortcuts", "platform": "!OSX" },
-			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_osx.html"}, "caption": "Keyboard Shortcuts", "platform": "OSX" },
+			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3"}, "caption": "★ Sublime Text 3 Documentation" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info"}, "caption": "★ Unofficial  Documentation" },
+			{ "command": "open_url", "args": {"url": "https://www.sublimetext.com/docs/3/api_reference.html"}, "caption": "★ API Reference" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_win.html"}, "caption": "★ Keyboard Shortcuts", "platform": "!OSX" },
+			{ "command": "open_url", "args": {"url": "http://docs.sublimetext.info/en/latest/reference/keyboard_shortcuts_osx.html"}, "caption": "★ Keyboard Shortcuts", "platform": "OSX" },
 			{ "caption": "-" },
-			{ "command": "open_url", "args": {"url": "https://github.com/SublimeTextIssues/Core"}, "caption": "Bug Tracking" },
-			{ "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "Forum" },
-			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n/SublimeUser3/blob/master/README.md"}, "caption": "SublimeUser3" },
+			{ "command": "open_url", "args": {"url": "https://github.com/SublimeTextIssues/Core"}, "caption": "★ Bug Tracking" },
+			{ "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "★ Forum" },
+			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n/SublimeUser3/blob/master/README.md"}, "caption": "★ SublimeUser3" },
 			{ "caption": "-" },
-			{
-				"caption": "Git",
-				"children":
-				[
-					{ "command": "open_url", "args": {"url": "http://git-scm.com/docs"}, "caption": "Reference" },
-					{ "command": "open_url", "args": {"url": "http://git-scm.com/book"}, "caption": "Book" },
-					{ "command": "open_url", "args": {"url": "https://github.com/anubhavchaturvedi/bitsaa/blob/master/resources/salesforce_git_developer_cheatsheet.pdf"}, "caption": "Quick reference" },
-					{ "command": "open_url", "args": {"url": "http://ndpsoftware.com/git-cheatsheet.html"}, "caption": "Workflow" }
-				]
-			},
-			{ "command": "open_url", "args": {"url": "https://packagecontrol.io/"}, "caption": "Packages Control" }
+			{ "command": "open_url", "args": {"url": "http://git-scm.com/docs"}, "caption": "★ Git - Reference" },
+			{ "command": "open_url", "args": {"url": "http://git-scm.com/book"}, "caption": "★ Git - Book" },
+			{ "command": "open_url", "args": {"url": "https://github.com/anubhavchaturvedi/bitsaa/blob/master/resources/salesforce_git_developer_cheatsheet.pdf"}, "caption": "★ Git - Quick reference" },
+			{ "command": "open_url", "args": {"url": "http://ndpsoftware.com/git-cheatsheet.html"}, "caption": "★ Git - Workflow" },
+			{ "caption": "-" },
+			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "★ GitHub" },
+			{ "command": "open_url", "args": {"url": "https://bitbucket.org/dashboard/overview"}, "caption": "★ BitBucket" },
+			{ "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/227600674"}, "caption": "★ Wunderlist" },
+			//{ "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "★ Cloud 9 IDE" }
+			{ "command": "open_url", "args": {"url": "https://packagecontrol.io/"}, "caption": "★ Packages Control" }
 		]
 	}
 ]

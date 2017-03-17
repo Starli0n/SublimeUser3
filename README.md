@@ -308,6 +308,11 @@ PACKAGE DEVELOPMENT
 ]
 ```
 
+### Inspect Core Packages
+- Create a `Data/Core Packages` directory
+- Copy packages from `Packages/*.sublime-package` to `Data/Core Packages/*.sublime-package`
+- Unzip packages to inspect
+
 ### Own Sublime Package Control Channel: package_control.git
 - Execute the following commands (or Fork the project before)
 ```sh
@@ -363,9 +368,11 @@ PACKAGE DEVELOPMENT
 - After PR merge, remove the package from `Data/Local/package_control.git/out_of_control.json`
 
 ### Use Python [Plugin Debugger](https://sublime.wbond.net/packages/Plugin%20Debugger)
-- Install [Winpdb](http://winpdb.org/download)
+- Install the [wxPython runtime](http://www.wxpython.org/download.php) required for `Winpdb`
+- Download [Winpdb](http://winpdb.org/download)
+- Unzip in a temporary folder
+- Execute from there
 	- `python setup.py install --record winpdb.txt`
-- Install the [wxPython runtime](http://www.wxpython.org/download.php)
 - After the installation, change shortcuts in `PYDIR/Lib/site-packages/winpdb.py` to Visual Studio like
 ```ini
 AC_CHAR = "\t"

@@ -1,7 +1,12 @@
 [
 	{ "caption": "-"},
-	{ "caption": "Git Status...", "command": "git_status" },
-	{ "caption": "Git Check this", "command": "git_diff_tool" },
+	{ "caption": "Git Status…", "command": "git_status" },
+	{ "caption": "Git Browse Repository…", "command": "git_open_config_url", "args": { "url_param": "remote.origin.url" } },
+	{ "caption": "Git Check this", "command": "git_raw", "args": { "command": "git difftool", "append_current_file": true, "may_change_files": false } },
+	{ "caption": "Git Add this", "command": "git_raw", "args": { "command": "git add", "append_current_file": true } },
+	{ "caption": "Git Hunk this", "command": "git_add_selected_hunk" },
+	{ "caption": "Git Unstage this", "command": "git_raw", "args": { "command": "git reset HEAD", "append_current_file": true, "show_in": "suppress" } },
+	{ "caption": "Git Discard this", "command": "git_raw", "args": { "command": "git checkout", "append_current_file": true } },
 	{ "caption": "-", "id": "tools" },
 	{ "caption": "λ Cmder", "command": "open_terminal", "platform": "Windows" },
 	{ "caption": "iTerm²", "command": "open_terminal", "platform": "OSX" }

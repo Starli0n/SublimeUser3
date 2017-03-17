@@ -1,0 +1,24 @@
+{
+	"folders":
+	[
+		{
+			"path": "../../Local"
+		},
+		{
+			"path": "../../Core Packages",
+			"file_exclude_patterns": ["*.sublime-package"]
+		},
+		{
+			"path": "../../Installed Packages"
+		},
+		{
+			"path": "../../Packages",
+			"folder_exclude_patterns": ["User", "markupsafe", "mdpopups", "pygments", "python-jinja2", "python-markdown"]
+		},
+		{
+			"path": "../../Packages/User",
+			"folder_exclude_patterns": ["Package Control.cache"],
+			"file_exclude_patterns": ["*.crt", "*.last-run", "*ca-bundle", "*.sublimepackage", "*.sublimepackage", "*.sublimepackage", "*.sublimepackage", ]
+		}
+	]
+}

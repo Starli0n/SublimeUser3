@@ -1,0 +1,10 @@
+{
+	"environment":
+	[
+		{ "Packages": [ "$HOME/Library/Application Support/Sublime Text 3/Packages/"]},
+		{ "Packages.ctrl": [ "$HOME/Library/Application Support/Sublime Text 3/Packages.ctrl/" ]},
+		{ "Packages.git": [ "$HOME/Library/Application Support/Sublime Text 3/Packages.git/" ]},
+		{ "Packages.2": [ "$HOME/Library/Application Support/Sublime Text 2/Packages/" ]}
+	],
+	"expand_alias": false
+}
