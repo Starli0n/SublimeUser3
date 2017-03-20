@@ -4,6 +4,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 3,
 	"caret_style": "phase",
+	"close_windows_when_empty": false,
 	"color_scheme": "Packages/Theme - Cobalt2/cobalt2.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"ensure_newline_at_eof_on_save": true,

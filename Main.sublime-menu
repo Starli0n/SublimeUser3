@@ -26,52 +26,55 @@
 		"children":
 		[
 			{ "caption": "-" },
-			{
-				"command": "edit_settings", "args":
-				{
-					"base_file": "C:\\Users\\Starli0n\\.gitconfig",
-					"user_file": "${packages}/User/Resources/Windows/HOME/.gitconfig"
-				},
-				"caption": "Open Git Global Config", "platform": "Windows"
-			},
-			{
-				"command": "edit_settings", "args":
-				{
-					"base_file": "/Users/Starli0n/.gitconfig",
-					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
-				},
-				"caption": "Open Git Global Config", "platform": "OSX"
-			},
-			{
-				"command": "edit_settings", "args":
-				{
-					"base_file": "${packages}/User/Resources/Windows/HOME/.gitconfig",
-					"user_file": "${packages}/User/Resources/OSX/HOME/.gitconfig"
-				},
-				"caption": "Open Git Global Config - Platforms"
-			},
+			{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/.gitconfig"}, "caption": "Open Git Global Config", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.gitconfig"}, "caption": "Open Git Global Config", "platform": "OSX" },
 			{ "command": "git_open_config_file", "caption": "Open Git Local Config"},
 			{ "command": "user_config_set", "caption": "Set Git Local Config User"},
-			{
-				"command": "edit_settings", "args":
-				{
-					"base_file": "${packages}/User/Resources/Windows/bin/gitools.sh",
-					"user_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh"
-				},
-				"caption": "gitools", "platform": "Windows"
-			},
-			{
-				"command": "edit_settings", "args":
-				{
-					"base_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh",
-					"user_file": "${packages}/User/Resources/Windows/bin/gitools.sh"
-				},
-				"caption": "gitools", "platform": "OSX"
-			},
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/Windows/bin/gitools.sh"}, "caption": "gitools", "platform": "Windows" },
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh"}, "caption": "gitools", "platform": "OSX" },
 			{ "command": "open_file", "args": {"file": "/D/Tools/System/w.cmd"}, "caption": "Menu - Work", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/AppData/Roaming/NuGet/NuGet.Config"}, "caption": "NuGet Config", "platform": "Windows" },
 			{ "command": "open_file", "args": {"file": "/D/Tools/cmder_mini/config/user-aliases.cmd"}, "caption": "Aliases", "platform": "Windows" },
-			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" }
+			{ "command": "open_file", "args": {"file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc"}, "caption": "Aliases", "platform": "OSX" },
+			{
+				"caption": "Platforms",
+				"children":
+				[
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/User/Resources/OSX/HOME/.gitconfig",
+							"user_file": "${packages}/User/Resources/Windows/HOME/.gitconfig"
+						},
+						"caption": "Open Git Global Config"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/gitools.sh",
+							"user_file": "${packages}/User/Resources/Windows/bin/gitools.sh"
+						},
+						"caption": "gitools"
+					},
+					{
+						"command": "edit_settings", "args":
+						{
+							"base_file": "${packages}/User/Resources/OSX/HOME/.MacOSX/.bashrc",
+							"user_file": "/D/Tools/cmder_mini/config/user-aliases.cmd"
+						},
+						"caption": "Aliases"
+					}
+				]
+			},
+			{
+				"caption": "SSH",
+				"children":
+				[
+					{ "command": "open_file", "args": {"file": "${packages}/User/Resources/Any/HOME/.ssh/config"}, "caption": "config" },
+					{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/.ssh/known_hosts"}, "caption": "known_hosts", "platform": "Windows" },
+					{ "command": "open_file", "args": {"file": "/C/Users/Starli0n/.ssh/authorized_keys"}, "caption": "authorized_keys", "platform": "Windows" },
+				]
+			}
 		]
 	},
 	{
@@ -155,6 +158,8 @@
 			{ "caption": "-" },
 			{ "command": "open_url", "args": {"url": "https://github.com/SublimeTextIssues/Core"}, "caption": "★ Bug Tracking" },
 			{ "command": "open_url", "args": {"url": "http://www.sublimetext.com/forum"}, "caption": "★ Forum" },
+			{ "command": "open_url", "args": {"url": "https://github.com/sublimehq"}, "caption": "★ GitHub - Sublime HQ Pty Ltd" },
+			{ "command": "open_url", "args": {"url": "https://github.com/SublimeText"}, "caption": "★ GitHub - Sublime Text Packages" },
 			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n/SublimeUser3/blob/master/README.md"}, "caption": "★ SublimeUser3" },
 			{ "caption": "-" },
 			{ "command": "open_url", "args": {"url": "http://git-scm.com/docs"}, "caption": "★ Git - Reference" },
@@ -162,9 +167,10 @@
 			{ "command": "open_url", "args": {"url": "https://github.com/anubhavchaturvedi/bitsaa/blob/master/resources/salesforce_git_developer_cheatsheet.pdf"}, "caption": "★ Git - Quick reference" },
 			{ "command": "open_url", "args": {"url": "http://ndpsoftware.com/git-cheatsheet.html"}, "caption": "★ Git - Workflow" },
 			{ "caption": "-" },
-			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "★ GitHub" },
+			{ "command": "open_url", "args": {"url": "https://github.com/Starli0n?tab=repositories"}, "caption": "★ My GitHub" },
 			{ "command": "open_url", "args": {"url": "https://bitbucket.org/dashboard/overview"}, "caption": "★ BitBucket" },
-			{ "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/227600674"}, "caption": "★ Wunderlist" },
+			{ "command": "open_url", "args": {"url": "https://www.wunderlist.com/#/lists/294737119"}, "caption": "★ Wunderlist" },
+			{ "command": "open_url", "args": {"url": "https://starli0n.github.io/ToolChain/shortcut.html"}, "caption": "★ ToolChain Shortcuts" },
 			//{ "command": "open_url", "args": {"url": "https://c9.io/starli0n"}, "caption": "★ Cloud 9 IDE" }
 			{ "command": "open_url", "args": {"url": "https://packagecontrol.io/"}, "caption": "★ Packages Control" }
 		]

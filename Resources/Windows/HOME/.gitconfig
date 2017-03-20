@@ -2,7 +2,7 @@
 	name = Starli0n
 	email = Starli0n@users.noreply.com
 [core]
-	editor = 'C:\\Tools\\SublimeText3\\sublime_text.exe' -w
+	editor = 'C:\\Tools\\SublimeText3\\subl.exe' -w
 	askpass = git-gui--askpass
 	autocrlf = input
 	#pager = cat # Prevent keypress from log command or use git --no-pager
@@ -14,7 +14,11 @@
 [difftool]
 	prompt = false
 [difftool "gitools"]
-	cmd = gitools.sh difftool \"$LOCAL\" \"$REMOTE\"
+	cmd = gitools.sh difftool \"$LOCAL\" \"$REMOTE\" local
+[difftool "dtcached"]
+	cmd = gitools.sh difftool \"$LOCAL\" \"$REMOTE\" cached
+[difftool "sublime"]
+	cmd = gitools.sh sublime \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = gitools
 [mergetool]
@@ -28,8 +32,8 @@
 	cfg = config -e # Edit local config
 	gcfg = config --global -e # Edit global config
 
-	rep = config remote.origin.url
-	repu = config remote.upstream.url
+	rep = "!start `git config remote.origin.url`"
+	repu = "!start `git config remote.upstream.url`"
 	s = "!gitools.sh shell" # Use git shell [@PARAMS]
 	la = "!git config --get-regexp alias | cut -c 7-"
 
@@ -107,8 +111,8 @@
 	po = push origin master # Push local commits to remote repository branch @BRANCH_NAME
 	pom = push origin master # Push local commits to remote repository
 	pomf = push origin master --force # Force push
-	pum = push upstream master # Push local commits to remote repository
-	pumf = push upstream master --force # Force push
+	pum = push upstream master # Push local commits to upstream repository
+	pumf = push upstream master --force # Force push local commits to upstream repository
 	pogp = push origin gh-pages # Push to GitHub pages
 	pogpf = push origin gh-pages --force # Force push to GitHub pages
 	pom1 = push origin HEAD~1:master # Push commit except the last one
@@ -119,7 +123,9 @@
 	pod = push origin --delete # Delete remote branch @BRANCH_NAME
 
 	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
-	dtc = difftool --cached # Diff between Repo and Staged
+	dtc = difftool --cached --tool=dtcached # Diff between Repo and Staged
+	sub = difftool --tool=sublime # (1) Add modified files to Sublime Text
+	subc = difftool --cached --tool=sublime # (1) Add staged files to Sublime Text
 	dtr = !sh -c 'git difftool $1~1 $1' - # Diff a specific revision @SHA
 	dts = submodule foreach 'git difftool' # Submodule version
 	dtcs = submodule foreach 'git difftool --cached' # Submodule version

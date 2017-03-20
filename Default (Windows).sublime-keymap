@@ -37,7 +37,7 @@
 	},
 
 	// AgentRansack
-	{ "keys": ["ctrl+alt+f3"],  "command": "agent_ransack" },
+	{ "keys": ["ctrl+alt+f"],  "command": "agent_ransack" },
 
 	// ColorHighlighter
 	{ "keys": ["ctrl+alt+c"], "command": "color_picker", "context": [{ "key": "color_highlighter.color_picker" }] },

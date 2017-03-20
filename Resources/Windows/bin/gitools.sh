@@ -29,19 +29,34 @@ elif [ "$1" = "config" ] && [ "$#" -eq 2 ] ; then
 	fi
 
 # Diff Tool
-elif [ "$1" = "difftool" ] && [ "$#" -eq 3 ] ; then
+elif [ "$1" = "difftool" ] && [ "$#" -eq 4 ] ; then
 	if [ "$2" = "/dev/null" ] ; then
 		echo FileN : $3
-		"${TOOLS}\SublimeText3\sublime_text.exe" -a "$3"
 	elif [ "$3" = "/dev/null" ] ; then
 		echo FileD : $2
 	else
+		if [ "$4" = "local" ] ; then
+			CAPTION=Local
+		else
+			CAPTION=Staged
+		fi
 		echo Comparing...
 		echo "   Left : $2"
 		echo "  Right : $3"
 		echo
-		"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -ub -dl "Base" -dr "Mine" "$2" "$3"
-		"${TOOLS}\SublimeText3\sublime_text.exe" -a "$3"
+		"C:\Program Files (x86)\WinMerge\WinMergeU.exe" -e -u -dl "Base - $2" -dr "$CAPTION - $3" "$2" "$3"
+	fi
+
+# Sublime Text: add modified files
+elif [ "$1" = "sublime" ] && [ "$#" -eq 3 ] ; then
+	if [ "$2" = "/dev/null" ] ; then
+		echo New : $3
+		"${TOOLS}\SublimeText3\subl.exe" -a "$3"
+	elif [ "$3" = "/dev/null" ] ; then
+		echo FileD : $2
+	else
+		echo Mod : $3
+		"${TOOLS}\SublimeText3\subl.exe" -a "$3"
 	fi
 
 # Merge Tool

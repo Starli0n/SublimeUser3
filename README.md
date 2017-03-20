@@ -129,6 +129,13 @@ In `Package Control.sublime-settings`
 - Copy `Packages/User/Resources/OSX/HOME/Library/Keyboard Layouts/*` to `~/Library/Keyboard Layouts/*`
 - System Preferences > Laguage & Text > Input Sources > French X-Coding
 
+### Remote Sublime Text
+On the server
+```
+> sudo curl -Lo /usr/local/bin/rsub https://raw.githubusercontent.com/textmate/rmate/master/bin/rmate --insecure
+> sudo chmod a+x /usr/local/bin/rsub
+```
+`/usr/local/bin` should be in `$PATH
 
 [WIN] INSTALL
 -------------
@@ -261,6 +268,13 @@ PHPUnit requires the install of XDebug
 
 COMPOSER
 --------
+
+### [OSX] Install Composer
+- Install Composer in `$HOME` following the [guidelines](https://getcomposer.org/download)
+- Create an alias
+```sh
+> sudo ln -s "$HOME/composer.phar" /usr/local/bin/composer
+```
 
 ### [WIN] Install Composer
 - Include the path `C:\Tools\System` to `%PATH%` Environment Variable

@@ -6,6 +6,7 @@
 
 export BASHRC_FILE="$HOME/.MacOSX/.bashrc"
 export PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
+export PATH="/Applications/XAMPP/xamppfiles/bin:${PATH}"
 export PATH="/usr/local/bin:${PATH}"
 export CURL_CA_BUNDLE=/usr/local/share/ca-bundle.crt
 export DOCKER_MACHINE_NAME=default
@@ -127,6 +128,7 @@ alias gogo='cd $GOSRC'
 ### Tools
 alias rapache='sudo /usr/sbin/apachectl restart' # Restart apache with XDEBUG_SESSION
 alias ver='which git;git --version;which python;python --version'
+alias srv='open http://localhost:8090 && php -S localhost:8090 -t ./'
 
 ### npm
 alias npmi='npm install --save'

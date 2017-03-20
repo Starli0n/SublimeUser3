@@ -15,7 +15,11 @@
 [difftool]
 	prompt = false
 [difftool "gitools"]
-	cmd = ~/.MacOSX/gitools.sh difftool \"$LOCAL\" \"$REMOTE\"
+	cmd = ~/.MacOSX/gitools.sh difftool \"$LOCAL\" \"$REMOTE\" local
+[difftool "dtcached"]
+	cmd = ~/.MacOSX/gitools.sh difftool \"$LOCAL\" \"$REMOTE\" cached
+[difftool "sublime"]
+	cmd = ~/.MacOSX/gitools.sh sublime \"$LOCAL\" \"$REMOTE\"
 [merge]
 	tool = gitools
 [mergetool]
@@ -29,8 +33,8 @@
 	cfg = config -e # Edit local config
 	gcfg = config --global -e # Edit global config
 
-	rep = config remote.origin.url
-	repu = config remote.upstream.url
+	rep = "!open `git config remote.origin.url`"
+	repu = "!open `git config remote.upstream.url`"
 	s = "!~/.MacOSX/gitools.sh shell" # Use git shell [@PARAMS]
 	la = "!git config --get-regexp alias | cut -c 7-"
 
@@ -120,7 +124,9 @@
 	pod = push origin --delete # Delete remote branch @BRANCH_NAME
 
 	dt = difftool # (1) Diff between Staged and Modified or (2) [@OLDER_SHA @NEWER_SHA]
-	dtc = difftool --cached # Diff between Repo and Staged
+	dtc = difftool --cached --tool=dtcached # Diff between Repo and Staged
+	sub = difftool --tool=sublime # (1) Add modified files to Sublime Text
+	subc = difftool --cached --tool=sublime # (1) Add staged files to Sublime Text
 	dtr = !sh -c 'git difftool $1~1 $1' - # Diff a specific revision @SHA
 	dts = submodule foreach 'git difftool' # Submodule version
 	dtcs = submodule foreach 'git difftool --cached' # Submodule version
