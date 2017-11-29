@@ -32,6 +32,7 @@
 	g = "!~/.MacOSX/gitools.sh config .gitconfig" # Show me
 	cfg = config -e # Edit local config
 	gcfg = config --global -e # Edit global config
+	scfg = config --system -e # Edit global config
 
 	rep = "!open `git config remote.origin.url`"
 	repu = "!open `git config remote.upstream.url`"

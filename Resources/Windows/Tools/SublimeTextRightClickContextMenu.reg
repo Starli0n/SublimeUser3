@@ -2,21 +2,21 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\SublimeTextAdd]
 @="Sublime Text"
-"Icon"="C:\\Tools\\SublimeText3\\sublime_text.exe"
+"Icon"="S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe"
 
 [HKEY_CLASSES_ROOT\*\shell\SublimeTextAdd\Command]
-@="\"C:\\Tools\\SublimeText3\\sublime_text.exe\" \"%1\""
+@="\"S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe\" \"%1\""
 
 [HKEY_CLASSES_ROOT\Folder\shell\SublimeText]
 @="Sublime Text"
-"Icon"="C:\\Tools\\SublimeText3\\sublime_text.exe"
+"Icon"="S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe"
 
 [HKEY_CLASSES_ROOT\Folder\shell\SublimeText\command]
-@="\"C:\\Tools\\SublimeText3\\sublime_text.exe\" \"%1\""
+@="\"S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe\" \"%1\""
 
 [HKEY_CLASSES_ROOT\*\shell\SublimeTextNew]
 @="Sublime Text - New"
-"Icon"="C:\\Tools\\SublimeText3\\sublime_text.exe"
+"Icon"="S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe"
 
 [HKEY_CLASSES_ROOT\*\shell\SublimeTextNew\Command]
-@="\"C:\\Tools\\SublimeText3\\sublime_text.exe\" -n \"%1\""
+@="\"S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe\" -n \"%1\""

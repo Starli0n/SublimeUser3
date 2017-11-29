@@ -7,7 +7,9 @@ My Sublime Text User folder for Sublime Text 3
 PRE-INSTALL
 -----------
 
-- Prerequisite: Git must be installed
+- Prerequisite, must be installed
+	- Git
+	- [Python27](https://www.python.org)
 - Fork the project: https://github.com/Starli0n/SublimeUser3 to F_SublimeUser3
 
 
@@ -16,7 +18,8 @@ INSTALL
 
 ### Package location
 - [OSX] `/Users/Starli0n/Library/Application Support/Sublime Text 3/Packages`
-- [WIN] `C:\Tools\SublimeText3\Data\Packages` (Download the portable version 64 bit)
+- [WIN] `%SUBL_ROOT%\Data\Packages` (Download the portable version 64 bit)
+	- Incorporate to [PortableApps](https://portableapps.com/) with the [skeleton](https://github.com/Starli0n/PortableApps-SublimeText)
 
 ### Install the software
 - Download Sublime Text 3 (http://www.sublimetext.com/3)
@@ -70,6 +73,7 @@ In `Package Control.sublime-settings`
 - [GoToClass](https://packagecontrol.io/packages/GoToClass)
 - [HTML5](https://packagecontrol.io/packages/HTML5)
 - [HTMLAttributes](https://packagecontrol.io/packages/HTMLAttributes)
+- [INI](https://packagecontrol.io/packages/INI)
 - [Language - French - Français](https://packagecontrol.io/packages/Language%20-%20French%20-%20Fran%C3%A7ais)
 - [LiveReload](https://packagecontrol.io/packages/LiveReload)
 - [Open-Include](https://github.com/titoBouzout/Open-Include)
@@ -88,6 +92,23 @@ In `Package Control.sublime-settings`
 - [Xdebug](https://packagecontrol.io/packages/Xdebug)
 
 (*own plugins)
+
+
+### Syntax highlighting for Git (Python)
+
+```bat
+> cd %SUBL_ROOT%\Data\Packages\User\Resources\Any\src
+> python -m compileall .
+```
+- Copy `src` to a new `bin`folder
+- In `src` remove all `*.pyc`
+- In `bin` remove all `*.py`
+
+
+### Sublime Projects
+
+- Sublime Projects could be stored in `%SUBL_ROOT%\Data\Local` folder
+- Config Project is stored in `%SUBL_ROOT%\Data\Packages\User` folder and could used as a template
 
 
 [OSX] INSTALL
@@ -132,34 +153,36 @@ In `Package Control.sublime-settings`
 ### Remote Sublime Text
 On the server
 ```
-> sudo curl -Lo /usr/local/bin/rsub https://raw.githubusercontent.com/textmate/rmate/master/bin/rmate --insecure
+> sudo curl -Lo /usr/local/bin/rsub https://raw.githubusercontent.com/aurora/rmate/master/rmate --insecure
 > sudo chmod a+x /usr/local/bin/rsub
 ```
-`/usr/local/bin` should be in `$PATH
+`/usr/local/bin` should be in `$PATH`
 
 [WIN] INSTALL
 -------------
 
 ### Usefull binaries
 - Include this path to `%PATH%` Environment Variable
-	- `C:\Tools\SublimeText3\Data\Packages\User\Resources\Windows\bin`
+	- `%SUBL_ROOT%\Data\Packages\User\Resources\Windows\bin`
 - Execute batch files (*.bat or *.cmd) or python scripts (*.py) in Sublime Text (Ctrl+B)
 - Call Sublime Text from a MS-DOS Console (> subl file_name)
 - Shortcut for git command in a MS-DOS Console (> g git_commands_params)
 - Add syntax highlighting for Git global config (Require Python) (> git g)
 
-### Create an alias `.gitconfig`
-`> mklink  %HOME%\.gitconfig C:\Tools\SublimeText3\Data\Packages\User\Resources\Windows\HOME\.gitconfig`
+### Create some aliases
+```bat
+> mklink %HOME%\.gitconfig %SUBL_ROOT%\Data\Packages\User\Resources\Windows\HOME\.gitconfig
+
+> mklink %HOME%\.bashrc %SUBL_ROOT%\Data\Packages\User\Resources\OSX\HOME\.bash_profile
+> mklink %HOME%\.ssh\config %SUBL_ROOT%\Data\Packages\User\Resources\Any\HOME\.ssh\config
+> junction %HOME%\.MacOSX %SUBL_ROOT%\Data\Packages\User\Resources\OSX\HOME\.MacOSX
+
+> mklink %CMDER_ROOT%\config\user-aliases.cmd %SUBL_ROOT%\Data\Packages\User\Resources\Windows\HOME\user-aliases.cmd
+> mklink %CMDER_ROOT%\config\powerline_prompt.lua %SUBL_ROOT%\Data\Packages\User\Resources\Windows\HOME\powerline_prompt.lua
+```
 
 ### Change the path of `Nuget Config`
 In `Packages/User/Main.sublime-menu` change `NuGet Config` path
-
-### Create aliases to use bash
-```bat
-> mklink %HOME%\.bashrc C:\Tools\SublimeText3\Data\Packages\User\Resources\OSX\HOME\.bash_profile
-> mklink %HOME%\.ssh\config C:\Tools\SublimeText3\Data\Packages\User\Resources\Any\HOME\.ssh\config
-> junction %HOME%\.MacOSX C:\Tools\SublimeText3\Data\Packages\User\Resources\OSX\HOME\.MacOSX
-```
 
 ### Add Sublime Text to the right click context menu
 - Edit the file `Packages/User/Resources/Windows/Tools/SublimeTextRightClickContextMenu.reg`
@@ -330,7 +353,7 @@ PACKAGE DEVELOPMENT
 ### Own Sublime Package Control Channel: package_control.git
 - Execute the following commands (or Fork the project before)
 ```sh
-> cd C:\Tools\SublimeText3\Data\Local
+> cd %SUBL_ROOT%\Data\Local
 > git clone https://Starli0n@github.com/Starli0n/SublimePackages.git package_control.git
 > cd package_control.git
 > git config user.name Starli0n
@@ -342,7 +365,7 @@ PACKAGE DEVELOPMENT
 - Open a terminal here: `Packages.git`
 - Execute the following commands
 ```sh
-> cd C:\Tools\SublimeText3\Data\Local
+> cd %SUBL_ROOT%\Data\Local
 > git clone https://Starli0n@github.com/Starli0n/f_package_control_channel.git package_control_channel.git
 > cd package_control_channel.git
 > git config user.name Starli0n

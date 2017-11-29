@@ -51,12 +51,12 @@ elif [ "$1" = "difftool" ] && [ "$#" -eq 4 ] ; then
 elif [ "$1" = "sublime" ] && [ "$#" -eq 3 ] ; then
 	if [ "$2" = "/dev/null" ] ; then
 		echo New : $3
-		"${TOOLS}\SublimeText3\subl.exe" -a "$3"
+		"${SUBL_ROOT}\subl.exe" -a "$3"
 	elif [ "$3" = "/dev/null" ] ; then
 		echo FileD : $2
 	else
 		echo Mod : $3
-		"${TOOLS}\SublimeText3\subl.exe" -a "$3"
+		"${SUBL_ROOT}\subl.exe" -a "$3"
 	fi
 
 # Merge Tool

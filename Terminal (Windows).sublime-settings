@@ -1,4 +1,4 @@
 {
 	"terminal": "cmd",
-	"parameters": ["/c", "%TOOLS%\\SublimeText3\\Data\\Packages\\User\\Terminal.cmd", "%CWD%"]
+	"parameters": ["/c", "%SUBL_ROOT%\\Data\\Packages\\User\\Terminal.cmd", "%CWD%"]
 }

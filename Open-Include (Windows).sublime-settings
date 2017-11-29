@@ -1,10 +1,9 @@
 {
 	"environment":
 	[
-		{ "Packages": [ "%TOOLS%\\SublimeText3\\Data\\Packages\\" ] },
-		{ "Packages.ctrl": [ "%TOOLS%\\SublimeText3\\Data\\Packages.ctrl\\" ]},
-		{ "Packages.git": [ "%TOOLS%\\SublimeText3\\Data\\Packages.git\\" ]},
-		{ "Packages.2": [ "%TOOLS%\\SublimeText\\Data\\Packages\\" ] }
+		{ "Packages": [ "%SUBL_ROOT%\\Data\\Packages\\" ] },
+		{ "Packages.ctrl": [ "%SUBL_ROOT%\\Data\\Packages.ctrl\\" ]},
+		{ "Packages.git": [ "%SUBL_ROOT%\\Data\\Packages.git\\" ]}
 	],
 	"expand_alias": false
 }

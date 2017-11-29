@@ -69,7 +69,7 @@ else
     export VAR_LA="ls -pla --show-control-chars -F --color"
     export VAR_EXPLORER="start ."
     export EDITOR='subl.bat'
-    export PACKAGE="$TOOLS/SublimeText3/Data/Packages"
+    export PACKAGE="$SUBL_ROOT/Data/Packages"
 fi
 export DOCKER_HOME="$TOOLS/Docker"
 export STPYSRC="$PACKAGE/User/Resources/Any/src"
@@ -107,11 +107,11 @@ alias tit='_tit(){ echo -ne "\033]$mode;$*\007"; }; _tit'
 
 ### Git
 alias g='git'
+alias gg='$STPYSRC/colorcfg.pyc $HOME/.gitconfig'
 alias gl='git log --pretty=oneline --color --abbrev-commit --graph --decorate --all'
 alias gll='git log --pretty=oneline --color --abbrev-commit --graph --decorate --first-parent'
 alias gst='git status'
 alias gdt='git difftool'
-alias gg="$STPYSRC/colorcfg.py $HOME/.gitconfig"
 alias gh='cat $HOME/.gitconfig'
 alias gv='git --version'
 

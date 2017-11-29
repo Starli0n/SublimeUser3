@@ -2,7 +2,7 @@
 	name = Starli0n
 	email = Starli0n@users.noreply.com
 [core]
-	editor = 'C:\\Tools\\SublimeText3\\subl.exe' -w
+	editor = "$SUBL_ROOT\\\\subl.exe" -w
 	askpass = git-gui--askpass
 	autocrlf = input
 	#pager = cat # Prevent keypress from log command or use git --no-pager
@@ -31,6 +31,7 @@
 	g = "!gitools.sh config .gitconfig" # Show me
 	cfg = config -e # Edit local config
 	gcfg = config --global -e # Edit global config
+	scfg = config --system -e # Edit global config
 
 	rep = "!start `git config remote.origin.url`"
 	repu = "!start `git config remote.upstream.url`"

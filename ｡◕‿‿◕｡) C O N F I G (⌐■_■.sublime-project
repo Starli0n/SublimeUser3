@@ -5,20 +5,45 @@
 			"path": "../../Local"
 		},
 		{
-			"path": "../../Core Packages",
-			"file_exclude_patterns": ["*.sublime-package"]
+			"file_exclude_patterns":
+			[
+				"*.sublime-package"
+			],
+			"path": "../../Core Packages"
 		},
 		{
 			"path": "../../Installed Packages"
 		},
 		{
-			"path": "../../Packages",
-			"folder_exclude_patterns": ["User", "markupsafe", "mdpopups", "pygments", "python-jinja2", "python-markdown"]
+			"folder_exclude_patterns":
+			[
+				"User",
+				"markupsafe",
+				"mdpopups",
+				"pygments",
+				"pymdownx",
+				"python-jinja2",
+				"python-markdown",
+				"pyyaml"
+			],
+			"path": "../../Packages"
 		},
 		{
-			"path": "../../Packages/User",
-			"folder_exclude_patterns": ["Package Control.cache"],
-			"file_exclude_patterns": ["*.crt", "*.last-run", "*ca-bundle", "*.sublimepackage", "*.sublimepackage", "*.sublimepackage", "*.sublimepackage", ]
+			"file_exclude_patterns":
+			[
+				"*.crt",
+				"*.last-run",
+				"*ca-bundle",
+				"*.sublimepackage",
+				"*.sublimepackage",
+				"*.sublimepackage",
+				"*.sublimepackage"
+			],
+			"folder_exclude_patterns":
+			[
+				"Package Control.cache"
+			],
+			"path": "../../Packages/User"
 		}
 	]
 }
