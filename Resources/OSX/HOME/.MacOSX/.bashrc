@@ -178,6 +178,13 @@ denv() {
     alias dinf='docker info'
     alias dv='docker version'
 
+    ### docker-compose
+    alias dc='docker-compose'
+    alias dcu='docker-compose up' # => docker-compose -f docker-compose.yml -f docker-compose.override.yml up
+    alias dcd='docker-compose down' # => docker-compose -f docker-compose.yml -f docker-compose.override.yml down
+    alias dcup='docker-compose -f docker-compose.yml -f production.yml up'
+    alias dcdp='docker-compose -f docker-compose.yml -f production.yml down'
+
     ### docker-machine
     alias denv='eval $(docker-machine env $DOCKER_MACHINE_NAME --shell bash)' # Replace the function by an alias
     alias dm='docker-machine'

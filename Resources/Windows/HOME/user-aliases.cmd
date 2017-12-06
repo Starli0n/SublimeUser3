@@ -57,6 +57,12 @@ eth=netsh interface show interface
 port=netstat -bano | findstr :$1
 task=tasklist /fi "pid eq $1"
 
+;= SSH
+ssh-init=ssh-keygen -A
+ssh-start=%GIT_INSTALL_ROOT%\usr\bin\sshd.exe -f %GIT_INSTALL_ROOT%\etc\ssh\sshd_config
+;=ssh-stop=ps & kill pid_sshd
+sproxy=ssh -D 3128 localhost
+
 ;= Tools
 checksum=fciv.exe -both $*
 vsclean=%TOOLS%\System\VSCleanRecent.reg
@@ -83,7 +89,6 @@ cprrd=composer remove --dev $*
 
 ;= docker
 d=docker $*
-dc=docker-compose $*
 dcw=docker-compose -f web.yml $*
 dr=docker run $*
 drn=docker run --name $*
@@ -109,6 +114,13 @@ drmi=docker rmi $*
 drmid=@FOR /f "tokens=*" %i IN ('docker images -f "dangling=true" -q') DO @docker rmi %i
 dinf=docker info
 dv=docker version
+
+;= docker-compose
+dc=docker-compose $*
+dcu=docker-compose up $*
+dcd=docker-compose down $*
+dcup=docker-compose -f docker-compose.yml -f production.yml up $*
+dcdp=docker-compose -f docker-compose.yml -f production.yml down $*
 
 ;= docker-machine
 dm=docker-machine $*
