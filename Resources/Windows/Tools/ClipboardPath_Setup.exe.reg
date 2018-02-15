@@ -7,3 +7,11 @@ Windows Registry Editor Version 5.00
 [HKEY_CLASSES_ROOT\Folder\shell\zzz_SB_ClipboardPath]
 @="Copy &Path to Clipboard"
 "Icon"="%SystemRoot%\\system32\\SHELL32.dll,260"
+
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\zzz_SB_ClipboardPath]
+@="Copy &Path to Clipboard"
+"Icon"="%SystemRoot%\\system32\\SHELL32.dll,260"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\zzz_SB_ClipboardPath\command]
+@="\"C:\\Program Files (x86)\\bin\\ClipboardPath\\ClipboardPath.exe\" \"%V\""

@@ -20,3 +20,10 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\*\shell\SublimeTextNew\Command]
 @="\"S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe\" -n \"%1\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SublimeText]
+@="Sublime Text"
+"Icon"="S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\SublimeText\command]
+@="\"S:\\PortableApps\\SublimeTextPortable\\App\\SublimeText\\sublime_text.exe\" \"%V\""
