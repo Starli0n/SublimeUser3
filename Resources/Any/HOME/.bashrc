@@ -151,6 +151,7 @@ alias dpse='docker ps --filter status=exited'
 alias dpsl='docker ps -lq'
 alias dl='docker logs -f'
 alias di='docker images'
+alias dia='docker images -a'
 alias dp='docker pull'
 alias ddt='docker diff'
 alias dci='docker commit'
@@ -158,13 +159,31 @@ alias ds='_ds(){ pushd $DOCKER_HOME; docker save -o Image/${1/\//-}.tar $1; popd
 alias dload='_ds(){ pushd $DOCKER_HOME; docker load -i Image/$1.tar; popd; }; _ds'
 alias drm='docker rm -f'
 alias drme='docker rm $(docker ps --filter status=exited --quiet)'
+alias drma='docker rm -f $(docker ps -a -q)'
 alias drmi='docker rmi'
 alias drmid='docker rmi $(docker images -f "dangling=true" -q)'
+alias drmia='docker rmi $(docker images -q)'
 alias dinf='docker info'
 alias dv='docker version'
 
+### docker-compose
 alias dc='docker-compose'
 alias dcu='docker-compose up' # => docker-compose -f docker-compose.yml -f docker-compose.override.yml up
 alias dcd='docker-compose down' # => docker-compose -f docker-compose.yml -f docker-compose.override.yml down
 alias dcup='docker-compose -f docker-compose.yml -f production.yml up'
 alias dcdp='docker-compose -f docker-compose.yml -f production.yml down'
+### docker stack
+export STACK_NAME=app
+alias stk='_stk(){ export STACK_NAME=$1; }; _stk'
+alias dsk='docker stack'
+alias dskd='docker stack deploy -c docker-compose.yml $STACK_NAME'
+alias dskl='docker stack ls'
+alias dskp='docker stack ps $STACK_NAME'
+alias dsks='docker stack services $STACK_NAME'
+alias dskr='docker stack rm $STACK_NAME'
+
+### docker swarm
+alias dsw='docker swarm'
+
+### docker service
+alias dsv='docker service'

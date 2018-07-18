@@ -103,6 +103,7 @@ dpse=docker ps --filter status=exited
 dpsl=docker ps -lq
 dl=docker logs -f $*
 di=docker images
+dia=docker images -a
 dp=docker pull $*
 ddt=docker diff $*
 dci=docker commit $*
@@ -110,8 +111,10 @@ ds=@set image_name=%TOOLS%\Docker\Image\$1.tar $T docker save -o %image_name:/=-
 dload=docker load -i %TOOLS%\Docker\Image\$1.tar
 drm=docker rm -f $*
 drme=@FOR /f "tokens=*" %i IN ('docker ps --filter status^=exited --quiet') DO @docker rm %i
+drma=docker rm -f $(docker ps -a -q)
 drmi=docker rmi $*
 drmid=@FOR /f "tokens=*" %i IN ('docker images -f "dangling=true" -q') DO @docker rmi %i
+drmia=docker rmi $(docker images -q)
 dinf=docker info
 dv=docker version
 
@@ -121,6 +124,22 @@ dcu=docker-compose up $*
 dcd=docker-compose down $*
 dcup=docker-compose -f docker-compose.yml -f production.yml up $*
 dcdp=docker-compose -f docker-compose.yml -f production.yml down $*
+
+;= docker stack
+;=export STACK_NAME=app
+;=stk=_stk(){ export STACK_NAME=$1; }; _stk
+;=dsk=docker stack
+;=dskd=docker stack deploy -c docker-compose.yml $STACK_NAME
+;=dskl=docker stack ls
+;=dskp=docker stack ps $STACK_NAME
+;=dsks=docker stack services $STACK_NAME
+;=dskr=docker stack rm $STACK_NAME
+
+;= docker swarm
+dsw=docker swarm
+
+;= docker service
+dsv=docker service
 
 ;= docker-machine
 dm=docker-machine $*
